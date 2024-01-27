@@ -328,57 +328,55 @@ docker run --detach -it debian
 ```
 2. This will run the debian container. To check if the debian container is running, type
 ```bash
-@joeynor ➜ /workspaces/OSProject (main) $ docker ps -a
-CONTAINER ID   IMAGE     COMMAND   CREATED         STATUS         PORTS     NAMES
-f65be1987f84   debian    "bash"    4 minutes ago   Up 4 minutes             romantic_jackson
+@tsyrzl ➜ /workspaces/OSProject (main) $ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS                        PORTS     NAMES
+a2639182ca66   debian    "bash"    37 minutes ago   Exited (137) 12 seconds ago             frosty_haslett
 ```
 
 3. Keep note of the name used by your container, this is usually given random names unless you specify your own name. Now run a bash command on the container. Make sure you use the name of your container instead of the one shown here. 
 ```bash
-docker exec -i -t romantic_jackson /bin/bash
+docker exec -i -t frosty_haslett /bin/bash
 ```
 
 4. Create a file on the container. First you must make sure you are in the bash command prompt of the container. The container is new, and does not have any software other than the debian OS. To create a new file, you will need an editor installed. In the bash shell of the container, run the package manager apt-get to install nano text editor. 
 
 ```bash
-root@f65be1987f84:~# apt-get update      
+root@a2639182ca66:/# apt-get update
+root@a2639182ca66:/# apt-get install nano
+root@a2639182ca66:/# cd /root
 
-root@f65be1987f84:~# apt-get install nano
-
-root@f65be1987f84:~# cd /root
-
-root@f65be1987f84:~# nano helloworld.txt
+root@a2639182ca66:~#  nano helloworld.txt
 ```
 
 5. Edit your helloworld.txt, create your messsage and save by typing ctrl-X. Once saved, explore using the container to see where the file is located. Then exit the shell, by typing **exit**.
 
 6. Stop the container and run **docker ps -a**, and restart the container again. Is your file in the container still available?
 ```bash 
-@joeynor ➜ /workspaces/OSProject (main) $ docker stop romantic_jackson
+@tsyrzl ➜ /workspaces/OSProject (main) $ docker stop frosty_haslett
 
-@joeynor ➜ /workspaces/OSProject (main) $ docker ps -a
+@tsyrzl ➜ /workspaces/OSProject (main) $ docker ps -a
 CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS                        PORTS     NAMES
-f65be1987f84   debian    "bash"    19 minutes ago   Exited (137) 18 seconds ago             romantic_jackson
+a2639182ca66   debian    "bash"    37 minutes ago   Exited (137) 12 seconds ago             frosty_haslett
 
-@joeynor ➜ /workspaces/OSProject (main) $ docker restart romantic_jackson
+@tsyrzl ➜ /workspaces/OSProject (main) $ docker restart frosty_haslett
 ```
 
 7. Stop the container and delete the container. What happened to your helloworld.txt?
 
 ```bash 
-@joeynor ➜ /workspaces/OSProject (main) $ docker stop romantic_jackson
+@tsyrzl ➜ /workspaces/OSProject (main) $ docker stop frosty_haslett
 
-@joeynor ➜ /workspaces/OSProject (main) $ docker ps -a
+@tsyrzl ➜ /workspaces/OSProject (main) $ docker ps -a
 CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS                        PORTS     NAMES
-f65be1987f84   debian    "bash"    19 minutes ago   Exited (137) 18 seconds ago             romantic_jackson
+a2639182ca66   debian    "bash"    37 minutes ago   Exited (137) 12 seconds ago             frosty_haslett
 
-@joeynor ➜ /workspaces/OSProject (main) $ docker rm romantic_jackson
+@tsyrzl ➜ /workspaces/OSProject (main) $ docker rm frosty_haslett
 ```
 
 ***Questions:***
 
-1. Are files in the container persistent. Why not?. ***(1 mark)*** __Fill answer here__.
-2. Can we run two, or three instances of debian linux? . ***(1 mark)*** __Fill answer here__.
+1. Are files in the container persistent. Why not?. ***(1 mark)*** __No, files in a container are not persistent by default. Changes made inside a container's filesystem are discarded when the container is stopped or removed.__.
+2. Can we run two, or three instances of debian linux? . ***(1 mark)*** __Yes, we can run multiple instances of Debian Linux by creating and running multiple containers. Each container operates independently, and you can run as many instances as your system resources allow__.
 
 ## Running your own container with persistent storage
 
