@@ -304,13 +304,19 @@ MiB Swap:      0.0 total,      0.0 free,      0.0 used.   5942.4 avail Mem
 __Linux codespaces-f6c17e 6.2.0-1018-azure #18~22.04.1-Ubuntu SMP Tue Nov 21 19:25:02 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux__.
 <br>
 11. What is the available free memory in the system. ***(1 mark)*** __Fill answer here__.
+<br>
 12. What is the available disk space mounted on /workspace. ***(1 mark)*** __Fill answer here__.
+<br>
 13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** __Fill answer here__.
+<br>
 14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** __Fill answer here__.
+<br>
 15. What is the TLB size of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
+<br>
 16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
+<br>
 17. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** __Fill answer here__.
-
+<br>
 ## Running your own container instance.
 
 1. At the terminal, run a linux instance. By typing the following command. 
