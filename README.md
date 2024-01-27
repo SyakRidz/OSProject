@@ -396,14 +396,22 @@ e28e63bf615f986903f02690338b6458838e734378cd7fa39527e15459290e90
 
 ***Questions:***
 
-1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)*** __-rw-rw-rw- 1 root root 0 Jan 27 16:21 myfile.txt // user: root. group: root__.
-2. Can you change the permission of the files to user codespace.  You will need this to be able to commit and get points for this question. __output: -rw-rw-rw- 1 codespace codespace 0 Jan 27 16:21 myfile.txt__ ***(2 mark)***
+1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)*** _user: root. group: root__.
+2. Can you change the permission of the files to user codespace.  You will need this to be able to commit and get points for this question. ***(2 mark)***
 ```bash
 //use sudo and chown
 sudo chown -R codespace:codespace /workspaces/OSProject/myroot
 
 ```
-*** __Fill answer here__.***
+*** __Question 1: 
+@tsyrzl ➜ /workspaces/OSProject/myroot (main) $ ls -l /workspaces/OSProject/myroot
+total 0
+-rw-rw-rw- 1 root root 0 Jan 27 16:21 myfile.txt
+Question 2:
+@tsyrzl ➜ /workspaces/OSProject/myroot (main) $ sudo chown -R codespace:codespace /workspaces/OSProject/myroot
+@tsyrzl ➜ /workspaces/OSProject/myroot (main) $ ls -l /workspaces/OSProject/myroot
+total 0
+-rw-rw-rw- 1 codespace codespace 0 Jan 27 16:21 myfile.txt__.***
 
 ## You are on your own, create your own static webpage
 
