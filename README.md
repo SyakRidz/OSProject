@@ -299,8 +299,10 @@ MiB Swap:      0.0 total,      0.0 free,      0.0 used.   5942.4 avail Mem
       1 codespa+  20   0    1136    640    640 S   0.0   0.0   0:00.29 docker-init                                       
       7 codespa+  20   0    7236   1792   1792 S   0.0   0.0   0:00.01 sleep                                             
      49 root      20   0   12192   3480   2560 S   0.0   0.0   0:00.00 sshd__.
+<br>
 10. Run the command **uname -a**. ***(1 mark)*** 
 __Linux codespaces-f6c17e 6.2.0-1018-azure #18~22.04.1-Ubuntu SMP Tue Nov 21 19:25:02 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux__.
+<br>
 11. What is the available free memory in the system. ***(1 mark)*** __Fill answer here__.
 12. What is the available disk space mounted on /workspace. ***(1 mark)*** __Fill answer here__.
 13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** __Fill answer here__.
