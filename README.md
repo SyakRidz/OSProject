@@ -303,19 +303,21 @@ MiB Swap:      0.0 total,      0.0 free,      0.0 used.   5942.4 avail Mem
 10. Run the command **uname -a**. ***(1 mark)*** 
 __Linux codespaces-f6c17e 6.2.0-1018-azure #18~22.04.1-Ubuntu SMP Tue Nov 21 19:25:02 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux__.
 <br>
-11. What is the available free memory in the system. ***(1 mark)*** __Fill answer here__.
+11. What is the available free memory in the system. ***(1 mark)*** __approximately 148Mi__.
 <br>
-12. What is the available disk space mounted on /workspace. ***(1 mark)*** __Fill answer here__.
+12. What is the available disk space mounted on /workspace. ***(1 mark)*** __17,516,508 kilobytes (or approximately 17.5 GB)__.
 <br>
-13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** __Fill answer here__.
+13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** __Version: Linux codespaces-f6c17e 6.2.0-1018-azure #18~22.04.1-Ubuntu SMP Tue Nov 21 19:25:02 UTC 2023
+Architecture: x86_64 x86_64 x86_64__.
 <br>
-14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** __Fill answer here__.
+14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** __ls: Lists files and directories in the current directory without detailed information.
+ls -asl: Lists files and directories in the current directory with detailed information, including file permissions, owner, group, size, and modification date.__.
 <br>
-15. What is the TLB size of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
+15. What is the TLB size of the Virtual CPU. ***(1 mark)*** __2560 4K pages__.
 <br>
-16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
+16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** __3079.830__.
 <br>
-17. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** __Fill answer here__.
+17. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** __the process with PID 2599, belonging to the user "codespace," running the command "node." It is using 2.0% CPU and 4.2% memory.__.
 <br>
 ## Running your own container instance.
 
