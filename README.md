@@ -385,21 +385,22 @@ At the terminal, create a new directory called **myroot**, and run a instance of
 2. Create a file in /root on the container, the files should also appear in myroot of your host VM.
 
 ```bash 
-@joeynor ➜ /workspaces/OSProject (main) $ mkdir myroot
-@joeynor ➜ /workspaces/OSProject (main) $ cd myroot/
-@joeynor ➜ /workspaces/OSProject/myroot (main) $ pwd
+@tsyrzl ➜ /workspaces/OSProject (main) $ mkdir myroot
+@tsyrzl ➜ /workspaces/OSProject (main) $ cd myroot/
+@tsyrzl ➜ /workspaces/OSProject/myroot (main) $ pwd
 /workspaces/OSProject/myroot
+@tsyrzl ➜ /workspaces/OSProject/myroot (main) $ docker run --detach -it -v /workspaces/OSProject/myroot:/root debian
+e28e63bf615f986903f02690338b6458838e734378cd7fa39527e15459290e90
 
-@joeynor ➜ /workspaces/OSProject/myroot (main) $ docker run --detach -it -v /workspaces/OSProject/myroot:/root debian
 ```
 
 ***Questions:***
 
-1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)*** __Fill answer here__.
-2. Can you change the permission of the files to user codespace.  You will need this to be able to commit and get points for this question. ***(2 mark)***
+1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)*** __-rw-rw-rw- 1 root root 0 Jan 27 16:21 myfile.txt // user: root. group: root__.
+2. Can you change the permission of the files to user codespace.  You will need this to be able to commit and get points for this question. __output: -rw-rw-rw- 1 codespace codespace 0 Jan 27 16:21 myfile.txt__ ***(2 mark)***
 ```bash
 //use sudo and chown
-sudo chown -R codespace:codespace myroot
+sudo chown -R codespace:codespace /workspaces/OSProject/myroot
 
 ```
 *** __Fill answer here__.***
