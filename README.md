@@ -403,11 +403,12 @@ e28e63bf615f986903f02690338b6458838e734378cd7fa39527e15459290e90
 sudo chown -R codespace:codespace /workspaces/OSProject/myroot
 
 ```
-*** __Question 1: 
+*** <br>
+__Question 1: <br>
 @tsyrzl ➜ /workspaces/OSProject/myroot (main) $ ls -l /workspaces/OSProject/myroot
 total 0
--rw-rw-rw- 1 root root 0 Jan 27 16:21 myfile.txt
-Question 2:
+-rw-rw-rw- 1 root root 0 Jan 27 16:21 myfile.txt <br>
+Question 2: <br>
 @tsyrzl ➜ /workspaces/OSProject/myroot (main) $ sudo chown -R codespace:codespace /workspaces/OSProject/myroot
 @tsyrzl ➜ /workspaces/OSProject/myroot (main) $ ls -l /workspaces/OSProject/myroot
 total 0
