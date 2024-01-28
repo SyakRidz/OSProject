@@ -427,7 +427,7 @@ docker run --detach -v /workspaces/OSProject/webpage:/usr/local/apache2/htdocs/ 
 
 4. If it works, codespace will trigger a port assignment and provide a URL for you to access your webpage like the one below.
 
- <img src="./images/websitelink.png" width="70%">
+ <img src="./images/website.png" width="70%">
 
 
 5. You can also see the Port in the **PORTS** tab, next to the terminal tab.
@@ -438,9 +438,9 @@ docker run --detach -v /workspaces/OSProject/webpage:/usr/local/apache2/htdocs/ 
 
 ***Questions:***
 
-1. What is the permission of folder /usr/local/apache/htdocs and what user and group owns the folder? . ***(2 mark)*** __Fill answer here__.
-2. What port is the apache web server running. ***(1 mark)***
-3. What port is open for http protocol on the host machine? ***(1 mark)***
+1. What is the permission of folder /usr/local/apache/htdocs and what user and group owns the folder? . ***(2 mark)*** __drwxr-sr-x 2 codespace codespace 4096 Jan 28 09:11__
+2. What port is the apache web server running. ***(1 mark)*** __-p 8083:80__
+3. What port is open for http protocol on the host machine? ***(1 mark)*** __-p 8083:80 , -p 8888:80 , -p 8081:80 , -p 8080:80__
 
 ## What to submit
 
